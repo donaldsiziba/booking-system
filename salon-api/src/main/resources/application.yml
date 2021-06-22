@@ -1,0 +1,26 @@
+salon:
+  details:
+    name: AR Salon and Day Spa Services
+    address: 1234 Main Street
+    city: Anytown
+    state: ND
+    zipcode: 58201
+    phone: 555-123-4567
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: P@ssw0rd!
+    url: jdbc:postgresql://localhost:5432/salon
+    username: postgres
+
+  jpa:
+    show-sql: true
+    hibernate:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  liquibase:
+    change-log: "classpath:liquibase/db-changelog.xml"
